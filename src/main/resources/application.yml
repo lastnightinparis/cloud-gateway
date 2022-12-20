@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: all
+          uri: http://glucose-monitor:8081
+          predicates:
+            - Path=/**
